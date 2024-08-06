@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/mobile.css" media="screen and (max-width: 650px)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <title>Beta</title>
     <link rel="shortcut icon" href="assets/img/betalg.png">
 </head>
@@ -27,12 +28,28 @@
             </ul>
             <div class="menu">
                 <button id="subscribe">Đăng ký</button>
-                <button class="open-menu">
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                <button class="mobile-menu open-menu">
+                    <i class="fa-solid fa-bars btn-list"></i>
                 </button>
             </div>
+        </div>
+        <div id="mobile-header">
+            <div class="nav-main">
+                <a href="#" class="nav-logo">
+                    <img src="assets/img/logo.png" alt="logo">
+                    <h1>Beta</h1>
+                </a>
+                <button class="mobile-menu close-menu">
+                    <i class="fa-solid fa-xmark btn-list"></i>
+                </button>
+            </div>
+            <ul class="nav">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Chủ đề</a></li>
+                <li><a href="#">Nổi bật</a></li>
+                <li><a href="#">Gần đây</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
         </div>
 
         <div id="container">
@@ -76,6 +93,8 @@
 
         </div>
     </div>
+
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
