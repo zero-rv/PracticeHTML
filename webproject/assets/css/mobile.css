@@ -1,14 +1,42 @@
+/*Main*/
+#main {
+
+}
+/*Header*/
+#header {
+    
+}
 .nav {
     display: none;
 }
 #header .open-menu{
     display: flex;
+    background: none;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
-#header .open-menu>div{
+#header .open-menu div{
     width: 30px;
-    height: 3px;
+    height: 4px;
     background-color: #e1ffff;
+    transition: background-color 0.3s ease;
+}
+#header .open-menu:hover div{
+    background-color: #c49efd;
+}
+#subscribe {
+
+}
+/*Slider*/
+#slider {
+
+}
+/*Content*/
+#content {
+
+}
+/*Footer*/
+#footer {
+
 }

@@ -1,22 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+:root {
+    --gradient_start: #289cd2;
+    --gradient_end: #05ced4;
+}
 * {
     margin: 0;
     padding: 0;
+    border: none;
     box-sizing: border-box;
-    user-select: none;
-    font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 a{
     text-decoration: none;
 }
-html {
-    font-family: "Inter";
+button{
+    cursor: pointer;
 }
 /* Body*/
 body{
+    font-family: "Inter";
     background-color: #0F1629;
-
 }
 /* Main */
 #main {
@@ -27,73 +30,94 @@ body{
 #header {
     width: 100%;
     height: 70px;
+    margin: auto;
+    padding: 2rem 1rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     border-bottom: 2px solid #202739;
     position: fixed;
 }
-#header>img{
-    width: 30px;
-}
-#header>img:hover{
-    background-color: #05ced4;
-}
 #header .menu {
     display: flex;
-    width: 14rem;
+    width: 140px;
     justify-content: space-between;
 }
-#header .menu>a{
-    display: block;
-    background-image: linear-gradient(to right,#289cd2,#05ced4);
-    font-size: 1.6rem;
+#subscribe{
+    background-image: linear-gradient(to right,var(--gradient_start),var(--gradient_end));
+    font-size: 1rem;
     font-weight: bolder;
     color: #e1ffff;
-    padding: 12px;
+    padding: 0.8rem 1rem;
     border-radius: 6px;
 }
-#header .menu>a:hover{
-    background-image: linear-gradient(to right,#05ced4,#289cd2);
+#subscribe:hover{
+    --gradient_start: #05ced4;
+    --gradient_end: #289cd2;
 }
-.logo{
+.nav-logo{
     display: flex;
     align-items: center;
 }
-.logo img{
+.nav-logo img{
     width: 30px;
     margin-right: 6px;
 }
-.logo h1{
+.nav-logo h1{
     color: #d9e5f7;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 .nav{
     display: flex;
     justify-content: center;
-    padding: 1.6rem 0;
     list-style-type: none;
 }
 .nav li{
     margin: auto 1.6rem;
 }
 .nav li a{
+    display: block;
+    position: relative;
     color: #7B87A1;
     font-weight: bold;
-    font-size: 1.6rem;
-    display: block;
+    padding: 0.75rem 0;
     transition: color 0.38s;
 }
 .nav li a:hover{
     color: #6dc9f7;
 }
-/* Menu */
-#header .open-menu {
-    display: none;
+.nav li a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #6dc9f7;
+    transition: all 0.3s ease;
 }
-/* Slider */
-#slider {
-
+.nav li a:hover::after{
+    width: 100%;
+}
+/* Menu */
+/* Container */
+#container {
+    position: relative;
+    max-width: 1200px;
+    top: 70px;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+}
+.blur-bg {
+    position: absolute;
+    top: 70px;
+    box-shadow: 0 0 1000px 50px #6dc9f7;
+    z-index: -999;
+}
+#container p{
+    color: white;
 }
 /* Content */
 #content {
