@@ -32,18 +32,16 @@
     z-index: 999;
     transition: all 0.3s ease;
 }
-#mobile-header .nav-main{
-    display: flex;
-    padding: 1rem;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #2a3144;
-}
 #mobile-header .nav{
     flex-direction: column;
 }
 #mobile-header .close-menu {
-    margin: 15px 20px auto auto;
+    font-size: 1rem;
+    padding: 20px;
+    text-align: right;
+}
+#mobile-header .nav-logo{
+    margin: 0 auto 12px;
 }
 /*Slider*/
 #slider {
