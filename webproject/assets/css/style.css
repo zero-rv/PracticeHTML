@@ -18,6 +18,7 @@ button{
 }
 /* Body*/
 body{
+    z-index: 0;
     font-family: "Inter";
     background-color: #0F1629;
 }
@@ -25,16 +26,17 @@ body{
 #main {
    
 }
-#main::after{
-    display: none;
-    content: "";
+.cover{
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 1;
+    z-index: -100;
+}
+.cover-bg{
+    z-index: 100 !important;
+    background-color: rgba(0,0,0,0.7);
 }
 /* Header */
 #header, #mobile-header{
@@ -50,6 +52,7 @@ body{
     align-items: center;
     /* border-bottom: 2px solid #202739; */
     background-color: #0F1629;
+    z-index: 10;
 }
 .mobile-menu{
     background: none;
@@ -63,7 +66,7 @@ body{
 #header .mobile-menu{
     display: none;
 }
-#subscribe{
+.subscribe{
     position: relative;
     background: linear-gradient(to right,var(--gradient_start),var(--gradient_end));
     font-size: 1rem;
@@ -74,7 +77,7 @@ body{
     border-radius: 4px;
     z-index: 0;
 }
-#subscribe::after{
+.subscribe::after{
     content: "";
     position: absolute;
     width: 0;
@@ -86,7 +89,7 @@ body{
     z-index: -1;
     transition: all 0.3s ease;
 }
-#subscribe:hover::after{
+.subscribe:hover::after{
     width: 100%;
 }
 .nav-logo{
@@ -94,7 +97,7 @@ body{
     align-items: center;
 }
 .nav-logo img{
-    width: 30px;
+    width: 2rem;
     margin-right: 6px;
 }
 .nav-logo h1{
@@ -146,7 +149,7 @@ body{
     padding: 2rem;
     display: flex;
     align-items: center;
-    z-index: -1;
+    z-index: 1;
 }
 .blur-bg {
     position: absolute;
@@ -157,8 +160,57 @@ body{
     color: white;
 }
 /* Content */
-#content {
-
+.intro-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.intro-content img{
+    width: 30%;
+}
+.headline-box {
+    width: 60%;
+}
+.headline-box p{
+    color: #7B87A1;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+.intro-subtitle{
+    font-weight: 700 !important;
+}
+.headline-text{
+    margin: 1rem auto;
+    color: #e1ffff;
+    font-size: 3rem;
+}
+.headline-text>span{
+    color: #289cd2;
+}
+.input-section {
+    /* transform: scale(0.9); */
+    display: flex;
+    width: 60%;
+    background-color: rgba(0,0,0,0.3);
+    padding: 0.2rem 0.4rem;
+    border: 2px solid #05ced4;
+    border-radius: 6px;
+    justify-content: space-between;
+    align-items: center;
+}
+.input-email {
+    margin-left: 12px;
+    background: none;
+    outline: none;
+    font-size: 1rem;
+    color: #e1ffff;
+    text-decoration: none;
+}
+.input-section .subscribe{
+    transform: scale(0.9);
 }
 /* Footer */
 #footer {

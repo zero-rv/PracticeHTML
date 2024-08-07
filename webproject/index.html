@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/mobile.css" media="screen and (max-width: 650px)">
+    <link rel="stylesheet" href="assets/css/mobile.css" media="screen and (max-width: 700px)">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <title>Beta</title>
     <link rel="shortcut icon" href="assets/img/betalg.png">
@@ -13,6 +13,7 @@
 
 <body>
     <div id="main">
+        <div class="cover"></div>
         <div id="header">
             <a href="#" class="nav-logo">
                 <img src="assets/img/logo.png" alt="logo">
@@ -27,16 +28,19 @@
                 <li><a href="#">Liên hệ</a></li>
             </ul>
             <div class="menu">
-                <button id="subscribe">Đăng ký</button>
+                <button class="subscribe">Đăng ký</button>
                 <button class="mobile-menu open-menu">
                     <i class="fa-solid fa-bars btn-list"></i>
                 </button>
             </div>
         </div>
         <div id="mobile-header">
-            <button class="mobile-menu close-menu">
-                <i class="fa-solid fa-xmark btn-list"></i>
-            </button>
+            <div class="close-box">
+                <div></div>
+                <button class="mobile-menu close-menu">
+                    <i class="fa-solid fa-xmark btn-list"></i>
+                </button>
+            </div>
             <a href="#" class="nav-logo">
                 <img src="assets/img/logo.png" alt="logo">
                 <h1>Beta</h1>
@@ -51,39 +55,27 @@
         </div>
 
         <div id="container">
-            <div id="content">
-                <span class="blur-bg"></span>
-                <span class="blur-bg"></span>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga distinctio dolorum eaque temporibus,
-                    perferendis qui! A voluptas praesentium nulla deleniti molestiae ratione, soluta iure. Commodi
-                    accusamus
-                    eos maiores error mollitia!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga distinctio dolorum eaque temporibus,
-                    perferendis qui! A voluptas praesentium nulla deleniti molestiae ratione, soluta iure. Commodi
-                    accusamus
-                    eos maiores error mollitia!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga distinctio dolorum eaque temporibus,
-                    perferendis qui! A voluptas praesentium nulla deleniti molestiae ratione, soluta iure. Commodi
-                    accusamus
-                    eos maiores error mollitia!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga distinctio dolorum eaque temporibus,
-                    perferendis qui! A voluptas praesentium nulla deleniti molestiae ratione, soluta iure. Commodi
-                    accusamus
-                    eos maiores error mollitia!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga distinctio dolorum eaque temporibus,
-                    perferendis qui! A voluptas praesentium nulla deleniti molestiae ratione, soluta iure. Commodi
-                    accusamus
-                    eos maiores error mollitia!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga distinctio dolorum eaque temporibus,
-                    perferendis qui! A voluptas praesentium nulla deleniti molestiae ratione, soluta iure. Commodi
-                    accusamus
-                    eos maiores error mollitia!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga distinctio dolorum eaque temporibus,
-                    perferendis qui! A voluptas praesentium nulla deleniti molestiae ratione, soluta iure. Commodi
-                    accusamus
-                    eos maiores error mollitia!
-                </p>
+            <span class="blur-bg"></span>
+            <span class="blur-bg"></span>
+            <div class="intro-content">
+                <div class="headline-box">
+                    <p class="intro-subtitle">Chào các bạn!</p>
+                    <h1 class="headline-text">
+                        Tôi là <span>Beta Chris</span>
+                    </h1>
+                    <p>
+                        Tôi sử dụng hoạt ảnh như một chiều thứ ba để đơn giản hóa trải nghiệm và thể hiện qua từng tương
+                        tác. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat quod minima, quo, rem
+                        cumque
+                        est ut consequatur consectetur in, repellendus magni ipsam ad quasi sed modi. Doloribus id
+                        officiis voluptates.
+                    </p>
+                    <div class="input-section">
+                        <input class="input-email" type="email" placeholder="Nhập email của bạn..." spellcheck="false">
+                        <button class="subscribe">Đăng ký</button>
+                    </div>
+                </div>
+                <img src="assets/img/hero-banner.png" alt="Beta Chris">
             </div>
         </div>
 
